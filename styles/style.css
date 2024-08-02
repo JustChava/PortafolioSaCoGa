@@ -122,6 +122,8 @@ body{
 }*/
 .urgente{
     color:var(--color-uergente);
+    font-size: larger;
+    font-family: var(--fuente-montserrat);
 }
 .presentacion{
     display: flex;
@@ -209,4 +211,11 @@ body{
     .presentacion__contenido{
         width: auto;
     }
+  }
+
+  /*Contacto Foto*/
+  .contacto__correo{
+    font-family: var(--fuente-krona);
+    color: var(--color-secundario);
+    font-size: 1.65rem;
   }
