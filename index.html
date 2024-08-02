@@ -10,10 +10,16 @@
 <body>
     <header class="header">
         <nav class="header__menu">
-            <a class="header__menu__link" href="index.html">Inicio</a>
-            <a class="header__menu__link" href="about.html">Sobre mí</a>
-            <a class="header__menu__link" href="proyectos.html">Proyectos</a>
-            <a class="header__menu__link" href="curriculum.html">Curriculum</a>
+            <input type="checkbox" id="header__toggle" class="header__toggle">
+            <label for="header__toggle" class="header__toggle__label">
+                <span></span>
+            </label>
+            <ul class="header__list">
+                <li><a class="header__menu__link" href="index.html">Inicio</a></li>
+                <li><a class="header__menu__link" href="about.html">Sobre mí</a></li>
+                <li><a class="header__menu__link" href="proyectos.html">Proyectos</a></li>
+                <li><a class="header__menu__link" href="curriculum.html">Curriculum</a></li>
+            </ul>
         </nav>
     </header>
     <main class="presentacion">
