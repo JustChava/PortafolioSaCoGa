@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root{
-    --color-primario:#1A1A1A;/*Se puede usar #+codigo exadecimal y funciona*/
+    --color-primario:#1A1A1A;/*Se puede usar codigo RGB y funciona*/
     --color-secundario: #19ebb1;
     --color-terciario: #E0e5e3;
     --color-navegacion:#0b79d6;
@@ -25,7 +25,7 @@ body{
     background-color: var(--color-botonactivo);
 }*/
 .header{
-    padding: 2% 0% 0% 15%;
+    padding: 2% 0% 2% 15%;
 }
 .header__menu {
     display: flex;
@@ -91,47 +91,48 @@ body{
 .header__toggle__label span::after {
     bottom: -8px;
 }
-@media (max-width: 1000px) {
-    .header__list {
-        display: none;
-        position: absolute;
-        top: 10px;
-        right: 130px;
-        background-color: #47453320;
-        backdrop-filter: blur(0.25rem);
-        -webkit-backdrop-filter: blur(0.25rem);
-        border-radius: 7px;
-        flex-direction: column;
-        width: 200px;
-        height: 600px;
-        /*transform: translateX(100%);
-        transition: transform 0.3s ease-in-out;*/
+@media (max-width: 1100px) {
+    @media(max-width: 720px){
+        .header__list {
+            display: none;
+            position: absolute;
+            top: 10px;
+            right: 130px;
+            background-color: #47453320;
+            backdrop-filter: blur(0.25rem);
+            -webkit-backdrop-filter: blur(0.25rem);
+            border-radius: 7px;
+            flex-direction: column;
+            width: 200px;
+            height: 600px;
+            /*transform: translateX(100%);
+            transition: transform 0.3s ease-in-out;*/
+        }
+        .header__list li {
+            margin: 10px 0;
+            text-align: center;
+        }
+        .header__toggle__label {
+            display: flex;
+        }
+        .header__toggle:checked ~ .header__list {
+            display: flex;
+        }
     }
-    .header__list li {
-        margin: 10px 0;
-        text-align: center;
+    .header{
+        padding: 10%;
     }
-    .header__toggle__label {
-        display: flex;
+    .header__menu{
+        justify-content: center;
     }
-    .header__toggle:checked ~ .header__list {
-        display: flex;
+    .presentacion{
+        flex-direction: column-reverse;
+        padding: 5%;
+    }
+    .presentacion__contenido{
+        width: auto;
     }
 }
-/*.header__menu__link{
-    font-size: 20px;
-    color: var(--color-navegacion);
-    margin: 22px 10px;
-    text-decoration: none;
-    padding: 15px 25px;
-    font-size: 1.5rem;
-    font-family: var(--fuente-montserrat);
-    transition: all 250ms;
-}
-.header__menu__link:hover{
-    color: var(--color-secundario);
-    transform: scale(1.15);
-}*/
 .urgente{
     color:var(--color-uergente);
     font-size: larger;
@@ -174,7 +175,7 @@ body{
     font-weight: 400;
 }
 .presentacion__enlaces__link{
-    width: 50%;
+    width: 80%;
     text-align: center;
     padding: 21.5px 0;
     border-radius: 8px;
@@ -194,7 +195,7 @@ body{
     box-shadow: 5px 4px 7px var(--color-navegacion);
     border: 3px solid var(--color-secundario);
     /*padding: 3%;*/
-    transform: scale(1.12);
+    transform: scaleX(1.12);
 }
 .presentacion__imagen{
     width: 40%;
@@ -209,25 +210,136 @@ body{
     display: flex;
     justify-content: center;
 }
-@media (max-width: 1000px) {
-    .header{
-        padding: 10%;
-    }
-    .header__menu{
-        justify-content: center;
-    }
-    .presentacion{
-        flex-direction: column-reverse;
-        padding: 5%;
-    }
-    .presentacion__contenido{
-        width: auto;
-    }
-  }
 
-  /*Contacto Foto*/
+  /*Contacto link Foto*/
   .contacto__correo{
     font-family: var(--fuente-krona);
     color: var(--color-secundario);
     font-size: 1.65rem;
   }
+
+  /*Curriculum*/
+  .contenedorcv{
+    display: grid;
+    grid-template-columns: 37% 63%;
+  }
+  .izquierdacv{
+    background-color: var(--color-primario);
+    padding: 10% 17% 10% 29%;
+ }
+ .fa-solid{
+    color: var(--color-uergente);
+    font-size: 1.2rem;
+ }
+ p{
+    padding:2% 2.2%;
+ }
+ .correocv{
+    font-size: 80%;
+    padding:0.3rem 0 0.3rem 5px;
+ }
+ .fotocv{
+    display: flex;
+    justify-content: center;
+    padding: 15% 0 5% 0;
+ }
+ .fotocv1{
+    width: 80%;
+    height: auto;
+    border-color: var(--color-uergente);
+    border-style: solid;
+    border-width: 2rem;
+    border-radius: 0 25% 0 0;
+ }
+ .titulocv{
+    color: var(--color-navegacion);
+    font-size: 190%;
+    text-align: center;
+    font-family: var(--fuente-krona);
+    padding: 30% 0 4% 0;
+ }
+ .subtituloizquierdo{
+    color: var(--color-navegacion);
+    font-family: var(--fuente-krona);
+    text-align: center;
+    font-size: 99%;
+    padding: 0 0 5% 0;
+ }
+ .datospersonalescv{
+    font-family: var(--fuente-montserrat);
+    color: var(--color-terciario);
+    text-align: left;
+    padding: 5% 0 5% 0;
+    font-size: 1.1rem;
+ }
+ .contactocv{
+    font-family: var(--fuente-montserrat);
+    color: var(--color-terciario);
+    text-align: left;
+    padding: 10% 0 15% 0;
+    font-size: 1.1rem;
+ }
+.listas{
+    color: var(--color-terciario);
+    text-decoration: none;
+    list-style: none;
+    font-size: 1.1rem;
+    font-family: var(--fuente-montserrat);
+    transition: color 0.3s ease;
+    padding: 0 0 15% 0;
+}
+.listas li{
+    padding: 3.3% 0;
+}
+.listas a{
+    text-decoration: none;
+    color:var(--color-terciario);
+}
+.idiomascv{
+    font-family: var(--fuente-montserrat);
+    color: var(--color-terciario);
+    text-align: left;
+    padding: 0 0 23% 0;
+    font-size: 1.1rem;
+}
+.esp-ingcv{
+    font-size: 1.1rem;
+    font-family: var(--fuente-krona);
+}
+ .derechacv{
+    background-color: var(--color-terciario);
+    color: var(--color-primario);
+    padding: 20% 7% 12% 10%;
+}
+.historia__actual{
+font-family: var(--fuente-krona);
+color: var(--color-secundario);
+font-size: 1.85rem;
+text-align: center;
+padding: 0 0 0 8%;
+}
+.subtituloderecho{
+font-family: var(--fuente-krona);
+color: var(--color-navegacion);
+padding:6% 0% 1% 0%;
+}
+.historia__1{
+color: var(--color-botonactivo);
+font-size: 1.3rem;
+font-family: var(--fuente-krona);
+padding: 2% 0 0 14%;
+}
+.historia__2{
+font-size: 1rem;
+font-family: var(--fuente-krona);
+padding: 0 0 0 14%;
+}
+.historia__3{
+font-family: var(--fuente-montserrat);
+color: var(--color-primario);
+padding: 2% 17% 4% 14%;
+text-align: justify;
+}
+.certificado{
+    color:var(--color-botonactivo);
+}
