@@ -214,6 +214,7 @@ body{
     }
     .header__list a{
         color: var(--color-terciario);
+        font-size: 5vw;
     }
     .header__toggle__label {
         display: flex;
