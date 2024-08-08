@@ -94,7 +94,7 @@ body{
         bottom: -8px;
     }
 
-@media(min-width:551px){
+@media(min-width:380px){
    
     .urgente{
         color:var(--color-uergente);
@@ -192,7 +192,7 @@ body{
     }
 
 }
-@media (max-width: 550px) {
+@media (max-width: 379px) {
     .header__list {
         display: none;
         position: absolute;
@@ -289,7 +289,7 @@ body{
         transition: all 200ms;
     }
     img .redsocial{
-        width:3rem;
+        width:4rem;
     } 
     @media(hover: hover){
         .presentacion__enlaces__link:hover{
@@ -334,7 +334,7 @@ body{
 
   /*Curriculum CELULAR*/
   
-  @media (max-width: 550px) 
+  @media (max-width: 379px) 
   {
         .contenedorcv{
             display: flex;
@@ -476,7 +476,7 @@ body{
 
 /*Curriculum PC*/
 
-@media (min-width:551px)
+@media (min-width:380px)
 {
     .contenedorcv{
         display: grid;
